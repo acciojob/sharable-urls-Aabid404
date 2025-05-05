@@ -2,36 +2,16 @@
 <html>
   <body>
     <script type="text/javascript" src="./script.js">
-		document.getElementById("form").addEventListener("submit", function (event) {
-  event.preventDefault(); // prevent actual form submission
-
-  const name = document.getElementById("name").value.trim();
-  const year = document.getElementById("year").value.trim();
-
-  let url = "https://localhost:8080/";
-
-  // Build query parameters
-  let params = [];
-  if (name) params.push("name=" + encodeURIComponent(name));
-  if (year) params.push("year=" + encodeURIComponent(year));
-
-  if (params.length > 0) {
-    url += "?" + params.join("&");
-  }
-
-  // Update the h3 element
-  document.getElementById("url").textContent = url;
-});
-
+		
 </script>
   </body>
 	<h3 id="url">https://localhost:8080/</h3>
 	<form method="post">
-		<lable for="aabid">Name:</lable><br>
-		<input type="text input" id="aabid" name="name">
+		<lable for="name">Name:</lable><br>
+		<input type="text input" id="name" name="name">
 			<br>
-		<lable for="2022">Year:</lable><br>
-		<input type="number input" id="2022" name="year">
+		<lable for="year">Year:</lable><br>
+		<input type="number input" id="year" name="year">
 			<br>
 		<button type="submit" id="button">Submit</button>
 
@@ -44,21 +24,21 @@
 			<br>
 		<button type="submit" id="button">Submit</button>
 
-		<h3 id="url">https://localhost:8080/?name=aabid&year2022</h3>
+		<h3 id="url">https://localhost:8080/?name=aabid&year2025</h3>
 		<lable for="name">Name:</lable><br>
 		<input type="text input" id="name" name="name" placeholder="aabid">
 			<br>
 		<lable for="year">Year:</lable><br>
-		<input type="number input" id="year" name="year" placeholder="2022">
+		<input type="number input" id="year" name="year" placeholder="2025">
 			<br>
 		<button type="submit" id="button">Submit</button>
 
-		<h3 id="url">https://localhost:8080/?year2022</h3>
+		<h3 id="url">https://localhost:8080/?year2025</h3>
 		<lable for="name">Name:</lable><br>
 		<input type="text input" id="name" name="name">
 			<br>
 		<lable for="year">Year:</lable><br>
-		<input type="number input" id="year" name="year" placeholder="2022">
+		<input type="number input" id="year" name="year" placeholder="2025">
 			<br>
 		<button type="submit" id="button">Submit</button>
 	</form>
